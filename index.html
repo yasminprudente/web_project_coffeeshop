@@ -17,7 +17,6 @@
       rel="stylesheet"
     />
     <link rel="shortcut icon" href="./images/favicon.ico" />
-    <link rel="stylesheet" href="./vendor/normalize.css" />
     <link rel="stylesheet" href="./pages/index.css" />
   </head>
   <body>
@@ -37,7 +36,7 @@
               <a class="nav__link" href="#reservation">Reservar uma mesa</a>
             </li>
             <li>
-              <a class="nav__link" href="#contact">Contatos</a>
+              <a class="nav__link" href="#footer">Contatos</a>
             </li>
           </ul>
         </nav>
@@ -108,9 +107,83 @@
             </div>
           </div>
         </section>
-        <section class="reservation" id="reservation"></section>
+        <section class="reservation" id="reservation">
+          <h3 class="reservation__title">Reservar uma mesa</h3>
+          <form class="form reservation__form">
+            <fieldset class="form__fieldset">
+              <label class="form__label">Nome *</label>
+              <input
+                type="text"
+                placeholder="Nome"
+                required
+                class="form__input"
+              />
+              <label class="form__label">Número de convidados *</label>
+              <input
+                type="number"
+                min="1"
+                max="8"
+                placeholder="1-8"
+                required
+                class="form__input"
+              />
+              <label class="form__label">Data e hora *</label>
+              <input type="date" class="form__input" required />
+              <label class="form__label">Seu e-mail *</label>
+              <input
+                type="email"
+                placeholder="email@email.com"
+                required
+                class="form__input"
+              />
+              <button type="submit" class="form__button">
+                Reservar uma mesa
+              </button>
+              <div class="form__checkbox">
+                <input type="checkbox" />
+                <h4>Eu concordo com os termos de uso</h4>
+              </div>
+            </fieldset>
+          </form>
+        </section>
       </main>
-      <footer class="footer"></footer>
+      <footer class="footer" id="footer">
+        <div class="footer__circle"></div>
+        <div class="footer__content">
+          <div class="footer__logo">
+            <img
+              src="./images/logo_coffeeshop_light.svg"
+              alt="Logo da empresa"
+            />
+          </div>
+          <div class="footer__social">
+            <h5 class="footer__social-heading">Mídia Social</h5>
+            <ul class="footer__list">
+              <li class="footer__list-item">
+                <a href="#" class="footer__social-link">
+                  <img
+                    src="./images/facebook_white.svg"
+                    alt="Facebook logo"
+                    class="footer__social-icon"
+                  />
+                  Facebook
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__social-link">
+                  <img
+                    src="./images/instagram_white.svg"
+                    alt="Instagram logo"
+                    class="footer__social-icon"
+                  />
+                  Instagram</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="footer__copyright">© 2025 Yasmin Prudente</p>
+      </footer>
     </div>
   </body>
 </html>
